@@ -19,7 +19,7 @@ function getExportFileBlob({ columns, data, fileType, fileName }) {
 
 export default function Table({ headers, data}) {
 
-
+  
   let columns = useMemo(
     () => [
       {
@@ -27,7 +27,7 @@ export default function Table({ headers, data}) {
         columns:headers.columns,
       },
     ],
-    []
+    [headers]
   );
  
   // Use the state and functions returned from useTable to build your UI
