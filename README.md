@@ -2,7 +2,7 @@
 
 The dashboard provides a dropdown to select one of the report types. Then it will be displayed in a table. The content of the data can be downloadable as a CSV.
 
-![Screen Shot 2021-10-04 at 4 09 53 AM](https://user-images.githubusercontent.com/80531625/135773818-1e2bab7f-7941-4373-950d-82c073a75d7f.png)
+![Screen Shot 2021-10-04 at 10 58 42 PM](https://user-images.githubusercontent.com/80531625/135896997-1e20932c-b6f8-439e-966a-2246425bf30f.png)
 
 ### Prerequisites
 
@@ -25,6 +25,12 @@ yarn start
 ```
 yarn build
 ```
+
+### Available Reports
+
+* daily - Generate 7 days turnover (excluding VAT) per day.
+* brand - Generate 7 days turnover per brand (excluding VAT) per day.
+
 
 ### Backend Code
 
