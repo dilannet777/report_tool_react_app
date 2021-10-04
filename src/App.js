@@ -4,9 +4,9 @@ import { useExportData } from "react-table-plugins";
 import Table from "./Table";
 import "./App.css";
 
-const API_HOST = "http://localhost:8000";
 
-const REPORT_API_URL = `${API_HOST}/api/reports/turnover`;
+
+const REPORT_API_URL = `${process.env.REACT_APP_API_HOST}/api/reports/turnover`;
 
 function App() {
   let columns = useMemo(
