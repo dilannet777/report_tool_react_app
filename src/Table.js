@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo} from "react";
 import { useTable, useFilters, useSortBy, usePagination  } from "react-table";
 import Papa from "papaparse";
 import { useExportData } from "react-table-plugins";
@@ -17,7 +17,41 @@ function getExportFileBlob({ columns, data, fileType, fileName }) {
     return false;
   }
 
-export default function Table({ columns, data }) {
+export default function Table({ headers, data}) {
+
+
+  /* let header =' ';
+  let col =[
+    {
+      Header: "Name",
+      accessor: "name",
+    },
+    {
+      Header: "Week End Date",
+      accessor: "week_end_date",
+    },
+    {
+      Header: "Turnover (EURO)",
+      accessor: "turnover",
+    },
+  ];
+  if (headers.Header){
+    header =headers.Header;
+  }
+
+  if (headers.columns){
+    //col =headers.columns;
+  }
+  */
+  let columns = useMemo(
+    () => [
+      {
+        Header: headers.Header,
+        columns:headers.columns,
+      },
+    ],
+    []
+  );
  
   // Use the state and functions returned from useTable to build your UI
   const {
