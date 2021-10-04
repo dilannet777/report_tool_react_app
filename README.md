@@ -26,6 +26,12 @@ yarn start
 yarn build
 ```
 
+### Available Reports
+
+* daily - Generate 7 days turnover (excluding VAT) per day.
+* brand - Generate 7 days turnover per brand (excluding VAT) per day.
+
+
 ### Backend Code
 
 GitHub URL : [Click Here](https://github.com/dilannet777/report_tool_api)
