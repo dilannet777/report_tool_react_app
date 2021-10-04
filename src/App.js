@@ -19,8 +19,7 @@ function App() {
       setBody(result.data.body);
 
       setColumns(result.data.columns);
-      //columns=[columns,...{coloums:result.data.columns}];
-      //setBody({ body: result.data.body});
+
     })();
   };
 
