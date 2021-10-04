@@ -20,29 +20,6 @@ function getExportFileBlob({ columns, data, fileType, fileName }) {
 export default function Table({ headers, data}) {
 
 
-  /* let header =' ';
-  let col =[
-    {
-      Header: "Name",
-      accessor: "name",
-    },
-    {
-      Header: "Week End Date",
-      accessor: "week_end_date",
-    },
-    {
-      Header: "Turnover (EURO)",
-      accessor: "turnover",
-    },
-  ];
-  if (headers.Header){
-    header =headers.Header;
-  }
-
-  if (headers.columns){
-    //col =headers.columns;
-  }
-  */
   let columns = useMemo(
     () => [
       {
