@@ -59,7 +59,7 @@ function App() {
       <div>
       <select onChange={handleFilterChange} >
         <option value="brand">Brand</option>
-        <option value="day">Day</option>
+        <option value="daily">Daily</option>
       </select>
       </div>
       <div>
