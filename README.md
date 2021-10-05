@@ -31,6 +31,9 @@ yarn build
 * daily - Generate 7 days turnover (excluding VAT) per day.
 * brand - Generate 7 days turnover per brand (excluding VAT) per day.
 
+### Output
+
+Demo : [Click Here](https://code2.codesands.com/)
 
 ### Backend Code
 
