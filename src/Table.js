@@ -53,7 +53,7 @@ export default function Table({ headers, data }) {
       columns,
       data,
       getExportFileBlob,
-      initialState: { pageIndex: 2 },
+      initialState: { pageIndex:0},
     },
     useFilters,
     useSortBy,
