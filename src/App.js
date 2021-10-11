@@ -1,6 +1,6 @@
 import React, {  useState, useEffect } from "react";
 import axios from "axios";
-import Table from "./Table";
+import Table from "./components/Table";
 import "./App.css";
 
 
@@ -17,7 +17,6 @@ function App() {
     (async () => {
       const result = await axios.post(`${REPORT_API_URL}`, { type });
       setBody(result.data.body);
-
       setColumns(result.data.columns);
 
     })();
