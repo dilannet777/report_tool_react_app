@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { useTable, useFilters, useSortBy, usePagination } from "react-table";
 import Papa from "papaparse";
 import { useExportData } from "react-table-plugins";
+import classes from './Table.module.css';
 
 function getExportFileBlob({ columns, data, fileType, fileName }) {
   if (fileType === "csv") {

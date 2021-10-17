@@ -1,50 +1,22 @@
-import React, {  useState, useEffect } from "react";
-import axios from "axios";
-import Table from "./components/Table";
-import "./App.css";
+import { Route, Switch } from 'react-router-dom';
 
+import TurnoverReportsPage from './pages/Reports/TurnOverReports';
+import AllReportPage from './pages/AllReports';
 
-
-const REPORT_API_URL = `${process.env.REACT_APP_API_HOST}/api/reports/turnover`;
+import Layout from './components/layout/Layout';
 
 function App() {
-  
-
-  const [data, setBody] = useState([]);
-  const [columns, setColumns] = useState([]);
-
-  const fetchTurnOverReport = (type) => {
-    (async () => {
-      const result = await axios.post(`${REPORT_API_URL}`, { type });
-      setBody(result.data.body);
-      setColumns(result.data.columns);
-
-    })();
-  };
-
-  const handleFilterChange = e => {
-    const value = e.target.value || undefined;
-    fetchTurnOverReport(value);
-  };
-
-  useEffect(() => {
-    fetchTurnOverReport("brand");
-  }, []);
-
   return (
-    <div className="App">
-      <div>
-      <select onChange={handleFilterChange} >
-        <option value="brand">Brand</option>
-        <option value="daily">Daily</option>
-      </select>
-      </div>
-      <div>
-    {columns.Header && data &&
-       <Table headers={columns} data={data} />
-    }
-      </div>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path='/' exact>
+          <AllReportPage />
+        </Route>
+        <Route path='/report/turnover'>
+          <TurnoverReportsPage />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 
